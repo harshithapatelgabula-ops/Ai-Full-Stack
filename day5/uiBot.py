@@ -1,6 +1,25 @@
 import ollama
 import streamlit as st
-st.title("welcome to my chatbot app!!")
+st.title(":rainbow[chatbot]")
+with st.sidebar:
+     st.header("chat settings")
+     if st.button("clear chat"):
+          st.session_state.messages = []
+     personalities = {
+         "kid":"answer the questions like you are explaining to a 5 year old kid give in 2 lines only",
+         "friend":"answer friendly and casual give in 2 lines only"
+     }
+     personality = st.selectbox("select a personality",personalities.keys())
+     uploaded_file = st.file_uploader("upload a text file..")
+     try:
+         if uploaded_file:
+              st.success("success")
+              if st.button("Display"):
+                  context = uploaded_file.read().decode("utf-8")
+                  st.text(context)
+     except:
+          st.error("error")
+
 if "messages" not in st.session_state:
     st.session_state.messages = []
 for msg in st.session_state.messages:
@@ -16,16 +35,13 @@ if question:
     with st.spinner("Loading..."):
         response = ollama.chat(
             model="llama3.2:3b",
-            messages=st.session_state.messages )
+            messages=[
+                {"role":"system","content":personalities[personality
+                                                         ]}]
+                +st.session_state.messages )
         st.session_state.messages .append(
             {"role":"assistant",
             "content":response["message"]["content"]}
         )
-    with st.chat_message("assistant"):
+        with st.chat_message("assistant"):
             st.write("AI:",response["message"]["content"])
-with st.sidebar:
-    uploaded_file = st.file_uploader("Upload a text file...")
-    if uploaded_file:
-        st.write("File uploaded successfully")
-        context = uploaded_file.read()
-        st.write(context)
