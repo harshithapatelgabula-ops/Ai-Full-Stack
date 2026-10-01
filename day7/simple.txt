@@ -1,0 +1,31 @@
+Nexora Labs is a fictional technology company founded in 2021 by Meera Kapoor. 
+The company is headquartered in Hyderabad and has a research office in Bengaluru.
+
+Nexora Labs develops AI-powered tools for education and small businesses. 
+Its main product, LearnMate, is an AI learning assistant that helps students 
+create study plans, summarize notes, generate practice questions, and track 
+their learning progress.
+
+LearnMate uses retrieval-augmented generation to answer questions from 
+student-provided study materials. The system stores document embeddings in 
+a vector database and retrieves relevant information before generating an answer.
+
+The company has three main departments: AI Research, Product Engineering, 
+and Customer Success. The AI Research team works on language models, 
+embeddings, and retrieval systems. The Product Engineering team develops 
+the web and mobile applications. The Customer Success team helps schools 
+and small businesses use Nexora products.
+
+Nexora Labs has 48 employees. The company follows a hybrid work model. 
+Employees can work from the Hyderabad office three days a week and work 
+remotely for the remaining two days.
+
+The company's internal training program is called Nexora Academy. 
+New employees attend the academy for four weeks. During the program, 
+they learn Python, Git, APIs, prompt engineering, vector databases, 
+and basic cloud deployment.
+
+Nexora Labs plans to release a new product called NotePilot in 2027. 
+NotePilot will convert meeting notes into summaries, action items, 
+and searchable knowledge. The product will initially target small 
+software companies with teams of fewer than 100 employees.

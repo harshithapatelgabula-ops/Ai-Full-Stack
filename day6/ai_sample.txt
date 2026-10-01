@@ -1,5 +1,7 @@
+"""
 Artificial Intelligence is a branch of computer science,
 Machine learning is a subset of artificial intelligence.
-Deep learnig uses neural networks.
+Deep learning uses neural networks.
 Large Language Models can understand and generate human-like text.
-RAG combines retrieval with Language generation.
+RAG combines retrieval with language generation.
+"""
